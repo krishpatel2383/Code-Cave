@@ -39,6 +39,7 @@
 <details>
   <summary>
   Krish Patel
+  kadi boy
   </summary>
   <p>https://github.com/krishpatel2383</p>
 </details>
@@ -46,6 +47,7 @@
 <details>
   <summary>
   Manan Patel
+  
   </summary>
   <p>https://github.com/manan2702</p>
 </details>
