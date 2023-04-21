@@ -23,7 +23,8 @@
   <p>
    👋Hey I am Parth Sharma<br>
   A work oriented smartworking individual accented with the latest trends and technologies of cyber security, having an inborn passion for technology and a strong sense of responsibility.<br>
-  Profile : https://github.com/hack-parthsharma
+  Profile : https://github.com/hack-parthsharma 
+  <p><img src="https://cp-logo.vercel.app/leetcode/hack-parthsharma?logo=true"></p>
   </p>
 </details>
  
