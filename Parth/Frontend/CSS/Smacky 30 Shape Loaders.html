@@ -1,0 +1,939 @@
+<html>
+    <head>
+        <title>CSS Shapes</title>
+    </head>
+    <body>
+        <div class="shapes1"></div>
+        <div class="shapes2"></div>
+        <div class="shapes3"></div>
+        <div class="shapes4"></div>
+        <div class="shapes5"></div>
+        <div class="shapes6"></div>
+        <div class="shapes7"></div>
+        <div class="shapes8"></div>
+        <div class="shapes9"></div>
+        <div class="shapes10"></div>
+        <div class="shapes11"></div>
+        <div class="shapes12"></div>
+        <div class="shapes13"></div>
+        <div class="shapes14"></div>
+        <div class="shapes15"></div>
+        <div class="shapes16"></div>
+        <div class="shapes17"></div>
+        <div class="shapes18"></div>
+        <div class="shapes19"></div>
+        <div class="shapes20"></div>
+        <div class="shapes21"></div>
+        <div class="shapes22"></div>
+        <div class="shapes23"></div>
+        <div class="shapes24"></div>
+        <div class="shapes25"></div>
+        <div class="shapes26"></div>
+        <div class="shapes27"></div>
+        <div class="shapes28"></div>
+        <div class="shapes29"></div>
+        <div class="shapes30"></div>
+    </body>
+    <style>
+        .shapes1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:#f03355;
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    animation: sh1 2s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes sh1 {
+  33% {border-radius: 0;background:#514b82 ;clip-path: polygon(0 0,100% 0,100% 100%,0 100%)}
+  66% {border-radius: 0;background:#ffa516 ;clip-path: polygon(50% 0,50% 0,100% 100%,0 100%)}
+}
+
+.shapes2 {
+    width: 40px;
+    height: 40px;
+    background:#25b09b;
+    clip-path: polygon(0 0,100% 0,100% 100%);
+    animation: sh2 2s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes sh2 {
+  25%  {clip-path: polygon(0    0,100% 0   ,0 100%)}
+  50%  {clip-path: polygon(0    0,100% 100%,0 100%)}
+  75%  {clip-path: polygon(100% 0,100% 100%,0 100%)}
+  100% {clip-path: polygon(100% 0,100% 100%,0 0   )}
+}
+
+.shapes3 {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  transform:rotate(45deg);
+  animation: sh3-0 1.5s infinite linear;
+}
+.shapes3:before,
+.shapes3:after {
+  content: "";
+  width:50%;
+  background:#514b82;
+  clip-path: polygon(0 50%,100% 0,100% 100%);
+  animation: inherit;
+  animation-name: sh3-1;
+}
+.shapes3:after {
+  clip-path: polygon(0 0,100% 50%,0% 100%);
+  animation-name: sh3-2;
+}
+@keyframes sh3-0 {
+  25% {width:50px;height:50px;transform:rotate(0)}
+  50% {width:50px;height:50px}
+  75% {width:70.70px;height:35.35px}
+  100%{width:70.70px;height:35.35px;transform:rotate(0)}
+}
+@keyframes sh3-1 {
+  0%,25% {clip-path: polygon(0 50% ,100% 0,100% 100%);transform:translate(0.3px)}
+  50%    {clip-path: polygon(0 50% ,100% 0,100% 100%);transform:translate(-5px)}
+  75%    {clip-path: polygon(0 100%,0    0,100% 100%);transform:translate(-5px)}
+  100%   {clip-path: polygon(0 100%,0    0,100% 100%);transform:translate(17.7px)}
+}
+@keyframes sh3-2 {
+  0%,25% {clip-path: polygon(0 0,100% 50%,0    100%);transform:translate(-0.3px) }
+  50%    {clip-path: polygon(0 0,100% 50%,0    100%);transform:translate(5px) }
+  75%    {clip-path: polygon(0 0,100% 0  ,100% 100%);transform:translate(5px)}
+  100%   {clip-path: polygon(0 0,100% 0  ,100% 100%);transform:translate(-17.7px) }
+}
+
+.shapes4 {
+    width: 40px;
+    height: 40px;
+    color:#f03355;
+    background:
+      conic-gradient(from  -45deg at top    20px left 50% ,#0000 ,currentColor 1deg 90deg,#0000 91deg),
+      conic-gradient(from   45deg at right  20px top  50% ,#0000 ,currentColor 1deg 90deg,#0000 91deg),
+      conic-gradient(from  135deg at bottom 20px left 50% ,#0000 ,currentColor 1deg 90deg,#0000 91deg),
+      conic-gradient(from -135deg at left   20px top  50% ,#0000 ,currentColor 1deg 90deg,#0000 91deg);
+    animation: sh4 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes sh4 {
+   50%  {width:60px;height: 60px;transform: rotate(180deg)}
+   100% {transform: rotate(360deg)}
+}
+
+.shapes5 {
+    width: 40px;
+    height: 40px;
+    color:orange;
+    background:
+      linear-gradient(currentColor 0 0),
+      linear-gradient(currentColor 0 0),
+      linear-gradient(currentColor 0 0),
+      linear-gradient(currentColor 0 0);
+    background-size: 21px 21px;
+    background-repeat:no-repeat;
+    animation: sh5 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes sh5 {
+   0%   {background-position: 0    0,100% 0   ,100% 100%,0 100%}
+   33%  {background-position: 0    0,100% 0   ,100% 100%,0 100%;width:60px;height: 60px}
+   66%  {background-position: 100% 0,100% 100%,0    100%,0 0   ;width:60px;height: 60px}
+   100% {background-position: 100% 0,100% 100%,0    100%,0 0   }
+}
+
+.shapes6 {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  animation: sh6-0 1.5s infinite linear;
+}
+.shapes6:before,
+.shapes6:after {
+  content: "";
+  grid-area: 1/1;
+  background:#514b82;
+  animation: 
+    sh6-1 1.5s infinite linear,
+    sh6-2 1.5s infinite linear;
+}
+.shapes6:after {
+  --s:-1;
+  animation-direction: reverse;
+}
+
+@keyframes sh6-0 {
+  0%,9%,91%,100% {background:#514b82}
+  10%,90%        {background:#0000}
+}
+@keyframes sh6-1 {
+  0%,33%   {clip-path: polygon(0   0,50% 100%,100% 0,100% 100%,0 100%)}
+  66%,100% {clip-path: polygon(50% 0,50% 100%,50%  0,100% 100%,0 100%)}
+}
+@keyframes sh6-2 {
+  0%,10%,90%,100% {transform: scale(var(--s,1)) translateY(0)}
+  33%,66%         {transform: scale(var(--s,1)) translateY(50%)}
+}
+
+.shapes7 {
+  width: 40px;
+  height: 40px;
+  color:#f03355;
+  position: relative;
+  background:
+    conic-gradient(from 134deg at top   ,currentColor 92deg,#0000 0) top,
+    conic-gradient(from -46deg at bottom,currentColor 92deg,#0000 0) bottom;
+  background-size:100% 50%;
+  background-repeat: no-repeat;
+}
+.shapes7:before {
+  content:'';
+  position: absolute;
+  inset:0;
+  background:
+    conic-gradient(from  -135deg at top 0    left   22px ,#0000 ,currentColor 1deg 90deg,#0000 0),
+    conic-gradient(from  -45deg  at right 0  top    22px ,#0000 ,currentColor 1deg 90deg,#0000 0),
+    conic-gradient(from   45deg  at bottom 0 right  22px ,#0000 ,currentColor 1deg 90deg,#0000 0),
+    conic-gradient(from  135deg  at left  0  bottom 20px ,#0000 ,currentColor 1deg 90deg,#0000 0);
+   animation: sh7 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes sh7 {
+   33%  {inset:-10px;transform: rotate(0deg)}
+   66%  {inset:-10px;transform: rotate(90deg)}
+   100% {inset:0    ;transform: rotate(90deg)}
+}
+
+.shapes8 {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  animation: sh8-0 1.5s infinite linear;
+}
+.shapes8:before,
+.shapes8:after {
+  content: "";
+  grid-area: 1/1;
+  background:#25b09b;
+  clip-path: polygon(0 0%,100% 0,100% 100%);
+  animation: inherit;
+  animation-name: sh8-1;
+}
+.shapes8:after {
+  --s:-1;
+}
+@keyframes sh8-0 {
+  66%      {transform: skewX(0deg)}
+  80%,100% {transform: skewX(-45deg)}
+}
+@keyframes sh8-1 {
+  0%   {transform:scale(var(--s,1)) translate(-0.5px,0)}
+  33%  {transform:scale(var(--s,1)) translate(calc(1px - 50%),calc(1px - 50%))}
+  66%  {transform:scale(var(--s,1)) translate(calc(1px - 50%),0%)}
+  100% {transform:scale(var(--s,1)) translate(calc(0.5px - 50%),0%)}
+}
+
+.shapes9 {
+  width: 40px;
+  height: 20px;
+  background:orange;
+  position: relative;
+  animation: sh9-0 1.5s infinite linear;
+}
+.shapes9:before,
+.shapes9:after {
+   content:"";
+   position: absolute;
+   background:inherit; 
+   bottom: 100%;
+   width: 50%;
+   height: 100%;
+   animation: inherit;
+   animation-name: sh9-1;
+}
+.shapes9:before {
+  left:0;
+  transform-origin: bottom left;
+  --s:-1;
+}
+.shapes9:after {
+  right:0;
+  transform-origin: bottom right;
+}
+@keyframes sh9-0 {
+   0%,10%   {transform:translateY(0%)    scaleY(1)}
+   49.99%   {transform:translateY(-50%)  scaleY(1)}
+   50%      {transform:translateY(-50%)  scaleY(-1)}
+   90%,100% {transform:translateY(-100%) scaleY(-1)}
+}
+@keyframes sh9-1 {
+   10%,90% {transform: rotate(0deg)}
+   50%     {transform: rotate(calc(var(--s,1)*180deg))}
+}
+
+.shapes10 {
+  display: flex;
+  width:50px;
+  height:50px;
+  animation: sh10-0 1.5s infinite linear;
+}
+.shapes10:before,
+.shapes10:after {
+  content: "";
+  width:50%;
+  background:#514b82;
+  clip-path: polygon(0 0,100% 50%,0% 100%);
+  animation: inherit;
+  animation-name: sh10-1;
+  transform-origin: bottom left;
+}
+.shapes10:before {
+  clip-path: polygon(0 50%,100% 0,100% 100%);
+  transform-origin: bottom right;
+  --s:-1;
+}
+
+@keyframes sh10-0 {
+  0%,34.99% {transform: scaley(1)}
+  35%,70%   {transform: scaley(-1)}
+  90%,100%  {transform: scaley(-1) rotate(180deg)}
+}
+
+@keyframes sh10-1 {
+  0%,10%,70%,100%{transform:translateY(-100%) rotate(calc(var(--s,1)*135deg))}
+  35%            {transform:translateY(0%)    rotate(0deg)}
+}
+
+.shapes11 {
+  width: 40px;
+  height: 40px;
+  color: #25b09b;
+  display: grid;
+}
+
+.shapes11::before,
+.shapes11::after {
+  content: "";
+  grid-area: 1/1;
+  background:currentColor;
+  clip-path: polygon(0 0,50% 50%, 0 100%);
+  animation: sp11 2s infinite;
+}
+.shapes11::after {
+  animation-delay: -1.5s;
+  --s:90deg;
+}
+
+@keyframes sp11 {
+    0%,12.5%    {transform:rotate(var(--s,0deg)) rotate(0deg)}
+    37.5%,62.5% {transform:rotate(var(--s,0deg)) rotate(-180deg)}
+    87.5%,100%  {transform:rotate(var(--s,0deg)) rotate(-360deg)}
+}
+
+.shapes12 {
+  width: 40px;
+  height: 40px;
+  color: #514b82;
+  background:repeating-conic-gradient(from -47deg,#0000 0deg, currentColor 1deg 91deg,#0000 94deg 180deg);
+  display: flex;
+  animation: sp12-0 2s infinite linear;
+}
+
+.shapes12::before,
+.shapes12::after {
+  content: "";
+  flex: 1;
+  background:currentColor;
+  clip-path: polygon(0 0,100% 50%, 0 100%);
+  animation: sp12 1s infinite alternate;
+  transform-origin: bottom left;
+
+}
+.shapes12::after {
+  clip-path: polygon(100% 0,100% 100%,0 50%);
+  transform-origin: top right;
+}
+
+@keyframes sp12-0 {
+    0%,49.9% {transform:scaleX( 1)}
+    50%,100% {transform:scaleX(-1)}
+}
+
+@keyframes sp12 {
+    0%, 20%  {transform:rotate(0deg)}
+    80%,100% {transform:rotate(-270deg)}
+}
+
+.shapes13 {
+  width: 40px;
+  height: 40px;
+  color: orange;
+  display: grid;
+}
+
+.shapes13::before,
+.shapes13::after {
+  content: "";
+  grid-area: 1/1;
+  background:currentColor;
+  clip-path: polygon(0 0,101% 0, 0 100%);
+  animation: sp13 2s infinite;
+}
+.shapes13::after {
+  --s:-1,-1;
+}
+
+@keyframes sp13 {
+    0%,
+    10%  {transform:scale(var(--s,1)) translate(0,0)        rotate(0deg)}
+    33%  {transform:scale(var(--s,1)) translate(20px,-20px) rotate(0deg)}
+    66%  {transform:scale(var(--s,1)) translate(20px,-20px) rotate(180deg)}
+    90%,
+    100% {transform:scale(var(--s,1)) translate(0px,0px)    rotate(180deg)}
+}
+
+.shapes14 {
+  width: 40px;
+  height: 40px;
+  color:#f03355;
+  background: conic-gradient(currentColor 0 270deg,#0000 0);
+  border-radius: 50%;
+  animation: sp14-0 4s infinite linear;
+}
+
+.shapes14::before {
+  content: "";
+  display: block;
+  height: 50%;
+  width: 50%;
+  border-top-left-radius: 100px;
+  background: currentColor;
+  animation: sp14 0.5s infinite alternate;
+}
+
+@keyframes sp14-0 {
+    0%,24.99%  {transform: rotate(0deg)}
+    25%,49.99% {transform: rotate(90deg)}
+    50%,74.99% {transform: rotate(180deg)}
+    75%,100%   {transform: rotate(270deg)}
+}
+
+@keyframes sp14 {
+    100%  {transform: translate(-10px,-10px)}
+}
+
+.shapes15 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  transform-origin:50% 125%;
+  animation: sp15-0 1.5s infinite linear;
+}
+.shapes15:before,
+.shapes15:after {
+  content:"";
+  flex:1;
+  background:orange;
+  animation: inherit;
+  transform-origin: bottom left;
+  animation-name: sp15-1;
+}
+.shapes15:before {
+  transform-origin: bottom right;
+  --s:-1;
+}
+
+@keyframes sp15-0 {
+   0%,10%   {transform:translateY(0)     scaleY(1)}
+   49.99%   {transform:translateY(-75%)  scaleY(1)}
+   50%      {transform:translateY(-75%)  scaleY(-1)}
+   90%,100% {transform:translateY(-150%) scaleY(-1)}
+}
+@keyframes sp15-1 {
+   10%,90% {transform: rotate(0deg)}
+   50%     {transform: rotate(calc(var(--s,1)*90deg))}
+}
+
+.shapes16 {
+  width: 40px;
+  height: 40px;
+  color:#25b09b;
+  position: relative;
+  background:
+    linear-gradient(currentColor 0 0) center/100% 10px,
+    linear-gradient(currentColor 0 0) center/10px 100%;
+    background-repeat: no-repeat;
+}
+.shapes16:before {
+  content:'';
+  position: absolute;
+  inset:0;
+  background:
+    linear-gradient(currentColor 0 0) 0    0,
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 0    100%,
+    linear-gradient(currentColor 0 0) 100% 100%;
+  background-size:15.5px 15.5px;
+  background-repeat: no-repeat;
+  animation: sp16 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes sp16 {
+   33%  {inset:-10px;transform: rotate(0deg)}
+   66%  {inset:-10px;transform: rotate(90deg)}
+   100% {inset:0    ;transform: rotate(90deg)}
+}
+
+.shapes17 {
+  width: 40px;
+  height: 60px;
+  color: #514b82;
+  position: relative;
+}
+
+.shapes17::before,
+.shapes17::after {
+  content: "";
+  position: absolute;
+  inset:0;
+  background:currentColor;
+  clip-path: polygon(0 0,100% 0, 100% 67%,50% 67%,50% 34%,0 34%);
+  animation: sp17 2s infinite;
+}
+.shapes17::after {
+  --s:-1,-1;
+}
+
+@keyframes sp17 {
+    0%,
+    10%  {transform:scale(var(--s,1)) translate(0,0)        rotate(0deg)}
+    33%  {transform:scale(var(--s,1)) translate(0,-20px)    rotate(0deg)}
+    66%  {transform:scale(var(--s,1)) translate(10px,-20px) rotate(-90deg)}
+    90%,
+    100% {transform:scale(var(--s,1)) translate(10px,-10px) rotate(-90deg)}
+}
+
+.shapes18 {
+  width: 40px;
+  height: 40px;
+  color:#f03355;
+  position: relative;
+  background: radial-gradient(10px,currentColor 94%,#0000);
+}
+.shapes18:before {
+  content:'';
+  position: absolute;
+  inset:0;
+  border-radius: 50%;
+  background:
+    radial-gradient(9px at bottom right,#0000 94%,currentColor) top    left,
+    radial-gradient(9px at bottom left ,#0000 94%,currentColor) top    right,
+    radial-gradient(9px at top    right,#0000 94%,currentColor) bottom left,
+    radial-gradient(9px at top    left ,#0000 94%,currentColor) bottom right;
+  background-size:20px 20px;
+  background-repeat: no-repeat;
+  animation: sp18 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes sp18 {
+   33%  {inset:-10px;transform: rotate(0deg)}
+   66%  {inset:-10px;transform: rotate(90deg)}
+   100% {inset:0    ;transform: rotate(90deg)}
+}
+
+.shapes19 {
+  width: 40px;
+  height: 20px;
+  background: orange;
+  position: relative;
+  animation: sp19-0 1.5s infinite linear;
+}
+.shapes19:before,
+.shapes19:after {
+   content:"";
+   position: absolute;
+   background: inherit; 
+   bottom: 100%;
+   width: 50%;
+   height: 100%;
+   animation: inherit;
+   animation-name: sp19-1;
+}
+.shapes19:before {
+  left:0;
+  --s:-1,1;
+}
+.shapes19:after {
+  right:0;
+}
+@keyframes sp19-0 {
+   0%,30%   {transform:translateY(0)     scaleY(1)}
+   49.99%   {transform:translateY(-50%)  scaleY(1)}
+   50%      {transform:translateY(-50%)  scaleY(-1)}
+   70%,100% {transform:translateY(-100%) scaleY(-1)}
+}
+@keyframes sp19-1 {
+   0%,10%,90%,100% {transform: scale(var(--s,1)) translate(0)}
+   30%,70%         {transform: scale(var(--s,1)) translate(20px)}
+   50%             {transform: scale(var(--s,1)) translate(20px,20px)}
+}
+
+.shapes20 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  transform-origin: 0% 150%;
+  animation: sp20-0 2s infinite linear;
+}
+.shapes20:before,
+.shapes20:after {
+  content:"";
+  flex:1;
+  background:#f03355;
+  animation: sp20-1 1s infinite linear alternate;
+  border-radius: 100px 0 0 100px;
+  transform-origin: 100% 100%;
+}
+.shapes20:after {
+  border-radius: 0 100px 100px 0;
+  transform-origin: 0% 100%;
+  --s:-1;
+}
+
+@keyframes sp20-0 {
+   0%,10%   {transform:translateY(0)     scaleY(1)}
+   49.99%   {transform:translateY(-100%) scaleY(1)}
+   50%      {transform:translateY(-100%) scaleY(-1)}
+   90%,100% {transform:translateY(-200%) scaleY(-1)}
+}
+@keyframes sp20-1 {
+   0%,20%  {transform:rotate(0deg)                    translate(0,0)     rotate(0deg)}
+   50%     {transform:rotate(calc(var(--s,1)*-90deg)) translate(0,0)     rotate(0deg)}
+   100%    {transform:rotate(calc(var(--s,1)*-90deg)) translate(0,-20px) rotate(calc(var(--s,1)*-90deg))}
+}
+
+.shapes21 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+
+.shapes21:before,
+.shapes21:after {
+  content:"";
+  flex:1;
+  background:#f03355;
+  animation: sp21 2s infinite;
+  border-radius: 100px 0 0 100px;
+  transform-origin: top right;
+  transform: translateY(calc(var(--s,1)*0%)) rotate(0);
+}
+.shapes21:after {
+  transform-origin: bottom left;
+  border-radius: 0 100px 100px 0;
+  --s:-1;
+}
+
+@keyframes sp21 {
+  33%  {transform: translate(0,calc(var(--s,1)*50%)) rotate(0)}
+  66%  {transform: translate(0,calc(var(--s,1)*50%)) rotate(-90deg)}
+  90%,
+  100% {transform: translate(calc(var(--s,1)*-100%),calc(var(--s,1)*50%))  rotate(-90deg)}
+}
+
+.shapes22 {
+  width: 36px;
+  height: 36px;
+  color: #514b82;
+  background:conic-gradient( from 134deg at top,currentColor  92deg,#0000 0);
+  position: relative;
+  animation: sp22-0 2s infinite linear;
+}
+.shapes22:before,
+.shapes22:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background:currentColor; 
+  transform-origin: top right;
+  clip-path: polygon(100% 0,100% 100%,0 100%);
+  inset:auto 100% 0 auto;
+  animation: sp22-1 1s infinite linear alternate;
+}
+
+.shapes22:after {
+  inset:auto auto 0 100%;
+  transform-origin: top left;
+  --s:-1;
+  clip-path: polygon(0 0,100% 100%,0 100%);
+}
+
+@keyframes sp22-0 {
+ 0% ,49.99% {transform:scaleY(1)}
+ 50%,90%    {transform:scaleY(-1)}
+ 100%       {transform:scaleY(-1) rotate(180deg)}
+}
+
+@keyframes sp22-1 {
+ 0% ,30%   {transform:rotate(calc(var(--s,1)*0))}
+ 70%,100%  {transform:rotate(calc(var(--s,1)*180deg))}
+}
+
+
+.shapes23 {
+  width: 36px;
+  height: 36px;
+  color: #25b09b;
+  background:linear-gradient(45deg,#0000 24%,currentColor 0 76%,#0000 0);
+  position: relative;
+  animation: sp23-0 1.5s infinite;
+}
+.shapes23:before,
+.shapes23:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background:currentColor; 
+  transform-origin: top left;
+  clip-path: polygon(-2px 0,0 -1px,100% 100%,-2px 100%);
+  inset:auto auto 0 0;
+  animation: sp23-1 1.5s infinite;
+}
+
+.shapes23:after {
+  inset:0 0 auto auto;
+  transform-origin: bottom right;
+  clip-path: polygon(0 0,calc(100% + 2px) 0,calc(100% + 2px) 100%,100% calc(100% + 1px));
+}
+
+@keyframes sp23-0 {
+ 0% ,50%   {transform:skewX(0)}
+ 90%,100%  {transform:skewX(-45deg)}
+}
+
+@keyframes sp23-1 {
+ 40%,100%  {transform:rotate(180deg);box-shadow: 0 0 0 3px;}
+}
+
+
+.shapes24 {
+  width: 40px;
+  height: 40px;
+  display: grid;
+}
+.shapes24:before,
+.shapes24:after {
+  content:"";
+  background:orange;
+  transform-origin:left;
+  animation: sp24 2s infinite;
+}
+.shapes24:before {
+  transform-origin:right;
+  --s:-1;
+}
+
+@keyframes sp24 {
+   0%,
+   10%   {transform:translate(0,0)  scale(1)}
+   33%   {transform:translate(calc(var(--s,1)*50%),0)  scale(1)}
+   66%   {transform:translate(calc(var(--s,1)*50%),calc(var(--s,1)*-50%))  scale(1)}
+   90%,
+   100%  {transform:translate(calc(var(--s,1)*50%),calc(var(--s,1)*-50%))  scale(0.5,2)}
+}
+
+
+.shapes25 {
+  width: 40px;
+  height: 40px;
+  color:#f03355;
+  position: relative;
+}
+.shapes25:before {
+  content:'';
+  position: absolute;
+  inset:0;
+  border-radius: 50%;
+  background:
+    conic-gradient(from 0deg,  #0000, currentColor 1deg 120deg,#0000 121deg) top right,
+    conic-gradient(from 120deg,#0000, currentColor 1deg 120deg,#0000 121deg) bottom,
+    conic-gradient(from 240deg,#0000, currentColor 1deg 120deg,#0000 121deg) top left;
+  background-size:40px 40px;
+  background-repeat: no-repeat;
+  animation: sp25 2s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes sp25 {
+   33%  {inset:-8px;transform: rotate(0deg)}
+   66%  {inset:-8px;transform: rotate(180deg)}
+   100% {inset:0   ;transform: rotate(180deg)}
+}
+
+.shapes26 {
+  width: 60px;
+  height: 60px;
+  color: #514b82;
+  position: relative;
+}
+
+.shapes26::before,
+.shapes26::after {
+  content: "";
+  position: absolute;
+  inset:0;
+  background:
+    linear-gradient(currentColor 0 0) 0 calc(var(--s,0)*-100%)/100% calc(100%/3),
+    repeating-linear-gradient(90deg,currentColor 0 25%,#0000 0 50%) calc(var(--s,0)*100%) 50%/calc(4*100%/3) calc(100%/3);
+  background-repeat: no-repeat;
+  animation: sp26 2s infinite;
+}
+.shapes26::after {
+  --s:-1;
+}
+
+@keyframes sp26 {
+    0%,
+    10%  {transform:translateY(calc(var(--s,1)*0));   background-position: 0 calc(var(--s,0)*-100%),calc(var(--s,0)*100%) 50%}
+    33%  {transform:translateY(calc(var(--s,1)*-20%));background-position: 0 calc(var(--s,0)*-100%),calc(var(--s,0)*100%) 50%}
+    66%  {transform:translateY(calc(var(--s,1)*-20%));background-position: 0 calc(var(--s,0)*-100%),calc(var(--s,0)*100% + 100%) 50%}
+    90%,
+    100%  {transform:translateY(calc(var(--s,1)*0));  background-position: 0 calc(var(--s,0)*-100%),calc(var(--s,0)*100% + 100%) 50%}
+}
+
+.shapes27 {
+  width: 50px;
+  height: calc(50px*0.866);
+  position: relative;
+  background:conic-gradient(from 120deg at 50% 64%,#0000, #25b09b 1deg 120deg,#0000 121deg);
+  transform-origin: 50% 50%;
+  animation: sp27-0 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+.shapes27:before,
+.shapes27:after {
+  content:'';
+  position: absolute;
+  inset:0;
+  background:inherit;
+  transform-origin: 50% 66%;
+  animation: sp27-1 1.5s infinite;
+}
+.shapes27:after {
+  --s:-1;
+}
+
+@keyframes sp27-0 {
+   0%,30%      {transform: rotate(0)}
+   70%         {transform: rotate(120deg)}
+   70.01%,100% {transform: rotate(360deg)}
+}
+
+@keyframes sp27-1 {
+   0%      {transform: rotate(calc(var(--s,1)*120deg)) translate(0)}
+   30%,70% {transform: rotate(calc(var(--s,1)*120deg)) translate(calc(var(--s,1)*-5px),10px)}
+   100%    {transform: rotate(calc(var(--s,1)*120deg)) translate(0)}
+}
+
+.shapes28 {
+  width: 20px;
+  height: 20px;
+  color: #514b82;
+  background:currentColor;
+  position: relative;
+  transform-origin: top right;
+  animation: sp28-0 2s infinite linear;
+}
+.shapes28:before,
+.shapes28:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:currentColor; 
+  transform-origin: bottom right;
+  clip-path: polygon(0 0,100% 100%,0 100%);
+  inset:auto auto 100% 0;
+  animation: sp28-1 1s infinite linear alternate;
+}
+
+.shapes28:after {
+  inset:auto auto 0 100%;
+  transform-origin: top left;
+  --s:-1;
+}
+
+@keyframes sp28-0 {
+ 0% ,49.99% {transform:scale(1)}
+ 50%,90%    {transform:scale(-1)}
+ 100%       {transform:scale(-1) rotate(180deg)}
+}
+
+@keyframes sp28-1 {
+ 0% ,30%   {transform:rotate(calc(var(--s,1)*0))}
+ 70%,100%  {transform:rotate(calc(var(--s,1)*90deg))}
+}
+
+.shapes29 {
+  width: 60px;
+  height: 60px;
+  color: orange;
+  background:
+    linear-gradient(currentColor 0 0) left   20px top    0,
+    linear-gradient(currentColor 0 0) top    20px right  0,
+    linear-gradient(currentColor 0 0) right  20px bottom 0,
+    linear-gradient(currentColor 0 0) bottom 20px left   0;
+  background-size:calc(100%/3) calc(100%/3);
+  background-repeat: no-repeat;
+  animation: 
+    sp29-1 .75s infinite alternate linear,
+    sp29-2 1.5s infinite;
+}
+
+
+@keyframes sp29-1 {
+ 90%,100% {background-size:calc(2*100%/3) calc(100%/3),calc(100%/3) calc(2*100%/3)}
+}
+@keyframes sp29-2 {
+ 0%,49.99% {transform:scaleX(1)}
+ 50%,100%  {transform:scaleX(-1)}
+}
+
+.shapes30 {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  animation: sh30-0 1.5s infinite linear;
+}
+.shapes30:before,
+.shapes30:after {
+  content: "";
+  grid-area: 1/1;
+  background:#25b09b;
+  animation: inherit;
+  animation-name: sh30-1
+}
+.shapes30:after {
+  transform-origin: bottom right;
+  --s:1;
+}
+
+@keyframes sh30-0 {
+  0%,66%      {transform:scaleY(1)}
+  66.01%,100% {transform:scaleY(-1)}
+}
+
+@keyframes sh30-1 {
+  0%,
+  10%   {transform:scaleX(calc(var(--s,-1)*-1)) rotate(calc(var(--s,0)*90deg));clip-path: polygon(0 0,0 100%,100% 100%)}
+  33%   {transform:scaleX(calc(var(--s,-1)*-1)) rotate(calc(var(--s,0)*0deg)); clip-path: polygon(0 0,0 100%,100% 100%)}
+  66%   {transform:scaleX(calc(var(--s,-1)*-1)) rotate(calc(var(--s,0)*0deg)); clip-path: polygon(0 0,0 100%,100% 0)}
+  66.01%{transform:scaleX(calc(var(--s,-1)*-1)) rotate(calc(var(--s,0)*0deg)); clip-path: polygon(0 0,0 100%,100% 100%)}
+  90%,
+  100%  {transform:scaleX(calc(var(--s,-1)*-1)) rotate(calc(var(--s,0)*90deg));clip-path: polygon(0 0,0 100%,100% 100%)}
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-auto-rows: 130px;
+  place-items:center;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+    </style>
+</html>

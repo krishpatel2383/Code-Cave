@@ -1,0 +1,651 @@
+<html>
+    <head>
+        <title> CSS Spinners</title>
+    </head>
+    <body>
+        <div class="spinner1"></div>
+        <div class="spinner2"></div>
+        <div class="spinner3"></div>
+        <div class="spinner4"></div>
+        <div class="spinner5"></div>
+        <div class="spinner6"></div>
+        <div class="spinner7"></div>
+        <div class="spinner8"></div>
+        <div class="spinner9"></div>
+        <div class="spinner10"></div>
+        <div class="spinner11"></div>
+        <div class="spinner12"></div>
+        <div class="spinner13"></div>
+        <div class="spinner14"></div>
+        <div class="spinner15"></div>
+        <div class="spinner16"></div>
+        <div class="spinner17"></div>
+        <div class="spinner18"></div>
+        <div class="spinner19"></div>
+        <div class="spinner20"></div>
+        <div class="spinner21"></div>
+        <div class="spinner22"></div>
+        <div class="spinner23"></div>
+        <div class="spinner24"></div>
+        <div class="spinner25"></div>
+        <div class="spinner26"></div>
+        <div class="spinner27"></div>
+        <div class="spinner28"></div>
+        <div class="spinner29"></div>
+    </body>
+    <style>
+        .spinner1 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:8px solid;
+  border-color:#000 #0000;
+  animation:s1 1s infinite;
+}
+@keyframes s1 {to{transform: rotate(.5turn)}}
+
+.spinner2 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:8px solid;
+  border-color:lightblue;
+  border-right-color: orange;
+  animation:s2 1s infinite linear;
+}
+@keyframes s2 {to{transform: rotate(1turn)}}
+
+.spinner3 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:conic-gradient(#0000 10%,#25b09b);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation:s3 1s infinite linear;
+}
+@keyframes s3 {to{transform: rotate(1turn)}}
+
+.spinner4 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  padding:1px;
+  background:conic-gradient(#0000 10%,#f03355) content-box;
+  -webkit-mask:
+    repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+    radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 calc(100% - 8px));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation:s4 1s infinite steps(10);
+}
+@keyframes s4 {to{transform: rotate(1turn)}}
+
+.spinner5 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:#514b82;
+  -webkit-mask:
+    repeating-conic-gradient(#0000 0deg,#000 1deg 70deg,#0000 71deg 90deg),
+    radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 calc(100% - 8px));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation:s5 1s infinite ;
+}
+@keyframes s5 {to{transform: rotate(.5turn)}}
+
+.spinner6 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  padding:3px;
+  background: 
+    radial-gradient(farthest-side,#ffa516 95%,#0000) 50% 0/12px 12px no-repeat,
+    radial-gradient(farthest-side,#0000 calc(100% - 5px),#ffa516 calc(100% - 4px)) content-box;
+  animation:s6 2s infinite ;
+}
+@keyframes s6 {to{transform: rotate(1turn)}}
+
+.spinner7 {
+  width:50px;
+  height:50px;
+  --c:radial-gradient(farthest-side,#25b09b 92%,#0000);
+  background: 
+    var(--c) 50% 0,
+    var(--c) 50% 100%,
+    var(--c) 100% 50%,
+    var(--c) 0    50%;
+  background-size:12px 12px;
+  background-repeat:no-repeat;
+  animation:s7 1s infinite;
+}
+@keyframes s7 {to{transform: rotate(.5turn)}}
+
+.spinner8 {
+  width:50px;
+  height:50px;
+  color:#f03355;
+  --c:radial-gradient(farthest-side,currentColor 92%,#0000);
+  background: 
+    var(--c) 50% 0   /12px 12px,
+    var(--c) 50% 100%/12px 12px,
+    var(--c) 100% 50%/12px 12px,
+    var(--c) 0    50%/12px 12px,
+    var(--c) 50%  50%/12px 12px,
+    linear-gradient(currentColor 0 0) 50% 50%/4px 100%,
+    linear-gradient(currentColor 0 0) 50% 50%/100% 4px;
+  background-repeat:no-repeat;
+  animation:s8 1s infinite linear;
+}
+@keyframes s8 {to{transform: rotate(.5turn)}}
+
+.spinner9 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background: 
+    radial-gradient(farthest-side,#f03355 95%,#0000) 50% 1px/12px 12px no-repeat,
+    radial-gradient(farthest-side,#0000 calc(100% - 14px),#ccc 0);
+  animation:s9 2s infinite linear;
+}
+@keyframes s9 {to{transform: rotate(1turn)}}
+
+.spinner10 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  color:#854f1d;
+  background: 
+    linear-gradient(currentColor 0 0) center/100% 4px,
+    linear-gradient(currentColor 0 0) center/4px 100%,
+    radial-gradient(farthest-side,#0000 calc(100% - 6px),currentColor calc(100% - 5px)),
+    radial-gradient(circle 6px,currentColor 94%,#0000 0);
+  background-repeat: no-repeat;
+  animation:s10 2s infinite linear;
+  position: relative;
+}
+.spinner10:before {
+  content: "";
+  position: absolute;
+  inset:0;
+  border-radius: inherit;
+  background:inherit;
+  transform:rotate(45deg);
+}
+@keyframes s10 {to{transform: rotate(.5turn)}}
+
+.spinner11 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 6px;
+  background:
+    conic-gradient(from 135deg at top,currentColor 90deg, #0000 0) 0 calc(50% - 4px)/17px 8.5px,
+    radial-gradient(farthest-side at bottom left,#0000 calc(100% - 6px),currentColor calc(100% - 5px) 99%,#0000) top right/50%  50% content-box content-box,
+    radial-gradient(farthest-side at top        ,#0000 calc(100% - 6px),currentColor calc(100% - 5px) 99%,#0000) bottom   /100% 50% content-box content-box;
+  background-repeat: no-repeat;
+  animation:s11 1s infinite linear;
+}
+
+@keyframes s11{ 
+  100%{transform: rotate(1turn)}
+}
+
+.spinner12 {
+    width: 50px;
+    height: 50px;
+    display: grid;
+}
+.spinner12::before,
+.spinner12::after {    
+    content:"";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side,#25b09b 92%,#0000);
+    background: 
+      var(--c) 50%  0, 
+      var(--c) 50%  100%, 
+      var(--c) 100% 50%, 
+      var(--c) 0    50%;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    animation: s12 1s infinite;
+}
+.spinner12::before {
+  margin:4px;
+  filter:hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear
+}
+
+@keyframes s12{ 
+  100%{transform: rotate(.5turn)}
+}
+
+.spinner13 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#ffa516 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#ffa516);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation:s13 1s infinite linear;
+}
+
+@keyframes s13{ 
+  100%{transform: rotate(1turn)}
+}
+
+.spinner14 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  animation: s4 4s infinite;
+}
+.spinner14::before,
+.spinner14::after {    
+  content:"";
+  grid-area: 1/1;
+  border:8px solid;
+  border-radius: 50%;
+  border-color:red red #0000 #0000;
+  mix-blend-mode: darken;
+  animation: s14 1s infinite linear;
+}
+.spinner14::after {
+  border-color:#0000 #0000 blue blue;
+  animation-direction: reverse;
+}
+
+@keyframes s14{ 
+  100%{transform: rotate(1turn)}
+}
+
+
+.spinner15 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border:4px solid #0000;
+  border-radius: 50%;
+  border-right-color:#25b09b;
+  animation: s15 1s infinite linear;
+}
+.spinner15::before,
+.spinner15::after {    
+  content:"";
+  grid-area: 1/1;
+  margin:2px;
+  border:inherit;
+  border-radius: 50%;
+  animation: s15 2s infinite;
+}
+.spinner15::after {
+  margin:8px;
+  animation-duration: 3s;
+}
+
+@keyframes s15{ 
+  100%{transform: rotate(1turn)}
+}
+
+.spinner16 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border:4px solid #0000;
+  border-radius: 50%;
+  border-color:#ccc #0000;
+  animation: s16 1s infinite linear;
+}
+.spinner16::before,
+.spinner16::after {    
+  content:"";
+  grid-area: 1/1;
+  margin:2px;
+  border:inherit;
+  border-radius: 50%;
+}
+.spinner16::before {
+  border-color:#f03355 #0000;
+  animation:inherit; 
+  animation-duration: .5s;
+  animation-direction: reverse;
+}
+.spinner16::after {
+  margin:8px;
+}
+
+@keyframes s16 { 
+  100%{transform: rotate(1turn)}
+}
+
+.spinner17 {
+  width: 70px;
+  height: 70px;
+  background:
+    radial-gradient(farthest-side,#ffa516 90%,#0000) center/16px 16px,
+    radial-gradient(farthest-side,green   90%,#0000) bottom/12px 12px;
+  background-repeat: no-repeat;
+  animation: s17 1s infinite linear;
+  position: relative;
+}
+.spinner17::before {    
+  content:"";
+  position: absolute;
+  width:8px;
+  height:8px;
+  inset:auto 0 16px;
+  margin: auto;
+  background:#ccc;
+  border-radius: 50%;
+  transform-origin: 50% calc(100% + 10px);
+  animation:inherit;
+  animation-duration: 0.5s;
+}
+
+
+@keyframes s17 { 
+  100%{transform: rotate(1turn)}
+}
+
+
+.spinner18 {
+  width: 50px;
+  height: 50px;
+  --c: radial-gradient(farthest-side,#514b82 92%,#0000);
+  background: 
+    var(--c) 50%  0, 
+    var(--c) 50%  100%, 
+    var(--c) 100% 50%, 
+    var(--c) 0    50%;
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  animation: s18 1s infinite;
+  position: relative;
+}
+.spinner18::before {    
+  content:"";
+  position: absolute;
+  inset:0;
+  margin: 3px;
+  background:repeating-conic-gradient(#0000 0 35deg,#514b82 0 90deg);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
+  border-radius: 50%;
+}
+
+@keyframes s18 { 
+  100%{transform: rotate(.5turn)}
+}
+
+.spinner19 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  color:#854f1d;
+  background: radial-gradient(farthest-side, currentColor calc(100% - 6px),#0000 calc(100% - 5px) 0);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 13px),#000 calc(100% - 12px));
+  border-radius: 50%;
+  animation: s19 2s infinite linear;
+}
+.spinner19::before,
+.spinner19::after {    
+  content:"";
+  grid-area: 1/1;
+  background:
+    linear-gradient(currentColor 0 0) center,
+    linear-gradient(currentColor 0 0) center;
+  background-size: 100% 10px,10px 100%;
+  background-repeat: no-repeat;
+}
+.spinner19::after {
+   transform: rotate(45deg);
+}
+
+@keyframes s19 { 
+  100%{transform: rotate(1turn)}
+}
+
+.spinner20 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid #514b82;
+  animation:
+    s20-1 0.8s infinite linear alternate,
+    s20-2 1.6s infinite linear;
+}
+@keyframes s20-1{
+   0%    {clip-path: polygon(50% 50%,0       0,  50%   0%,  50%    0%, 50%    0%, 50%    0%, 50%    0% )}
+   12.5% {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100%   0%, 100%   0%, 100%   0% )}
+   25%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 100% 100%, 100% 100% )}
+   50%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+   62.5% {clip-path: polygon(50% 50%,100%    0, 100%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+   75%   {clip-path: polygon(50% 50%,100% 100%, 100% 100%,  100% 100%, 100% 100%, 50%  100%, 0%   100% )}
+   100%  {clip-path: polygon(50% 50%,50%  100%,  50% 100%,   50% 100%,  50% 100%, 50%  100%, 0%   100% )}
+}
+@keyframes s20-2{ 
+  0%    {transform:scaleY(1)  rotate(0deg)}
+  49.99%{transform:scaleY(1)  rotate(135deg)}
+  50%   {transform:scaleY(-1) rotate(0deg)}
+  100%  {transform:scaleY(-1) rotate(-135deg)}
+}
+
+.spinner21 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#000 0 90deg,#ccc 0 180deg);
+  animation: s21 1s infinite linear;
+}
+
+@keyframes s21 {
+  100% {transform: rotate(.5turn)}
+}
+
+.spinner22 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border-radius: 50%;
+  background: conic-gradient(#25b09b 25%,#f03355 0 50%,#514b82 0 75%,#ffa516 0);
+  animation: s22 2s infinite linear;
+}
+.spinner22::before,
+.spinner22::after {
+   content:"";
+   grid-area: 1/1;
+   margin:15%;
+   border-radius: 50%;
+   background:inherit;
+   animation:inherit;
+}
+.spinner22::after {
+   margin:25%;
+   animation-duration: 3s;
+}
+
+@keyframes s22 {
+  100% {transform: rotate(1turn)}
+}
+
+
+.spinner23 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border-radius: 50%;
+  -webkit-mask:radial-gradient(farthest-side,#0000 40%,#000 41%);
+  background:
+    linear-gradient(0deg ,rgb(0 0 0/50%) 50%,rgb(0 0 0/100%) 0) center/4px 100%,
+    linear-gradient(90deg,rgb(0 0 0/25%) 50%,rgb(0 0 0/75% ) 0) center/100% 4px;
+  background-repeat: no-repeat;
+  animation: s23 1s infinite steps(12);
+}
+.spinner23::before,
+.spinner23::after {
+   content:"";
+   grid-area: 1/1;
+   border-radius: 50%;
+   background:inherit;
+   opacity: 0.915;
+   transform: rotate(30deg);
+}
+.spinner23::after {
+   opacity: 0.83;
+   transform: rotate(60deg);
+}
+
+@keyframes s23 {
+  100% {transform: rotate(1turn)}
+}
+
+.spinner24 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid #0000;
+  border-right-color: #ffa50097;
+  position: relative;
+  animation: s24 1s infinite linear;
+}
+.spinner24:before,
+.spinner24:after {
+  content: "";
+  position: absolute;
+  inset:-8px;
+  border-radius: 50%;
+  border:inherit;
+  animation:inherit;
+  animation-duration: 2s;
+}
+.spinner24:after {
+  animation-duration: 4s;
+}
+
+@keyframes s24 {
+  100% {transform: rotate(1turn)}
+}
+
+
+.spinner25 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background:#514b82;
+  -webkit-mask:radial-gradient(circle closest-side at 50% 40%,#0000 94%, #000);
+  transform-origin: 50% 40%;
+  animation: s25 1s infinite linear;
+}
+
+@keyframes s25 {
+  100% {transform: rotate(1turn)}
+}
+
+.spinner26 {
+  width: 40px;
+  height: 10px;
+  color: #f03355;
+  background:
+    radial-gradient(farthest-side,currentColor 90%,#0000) left  /10px 10px,
+    radial-gradient(farthest-side,currentColor 90%,#0000) center/10px 10px,
+    radial-gradient(farthest-side,currentColor 90%,#0000) right /10px 10px,
+    linear-gradient(currentColor 0 0) center/100% 4px; 
+  background-repeat: no-repeat;
+  position: relative;
+  animation: s26 2s infinite linear;
+}
+.spinner26:before,
+.spinner26:after {
+  content: "";
+  position: absolute;
+  inset:0;
+  background:inherit;
+  animation:inherit;
+  --s:calc(50% - 5px);
+  animation-direction: reverse;
+}
+.spinner26:after {
+  --s:calc(5px - 50%);
+}
+
+@keyframes s26 {
+  0%   {transform: translate(var(--s,0)) rotate(0)}
+  100% {transform: translate(var(--s,0)) rotate(1turn)}
+}
+
+.spinner27 {
+  --d:22px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: #25b09b;
+  box-shadow: 
+    calc(1*var(--d))      calc(0*var(--d))     0 0,
+    calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+    calc(0*var(--d))      calc(1*var(--d))     0 2px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+    calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+    calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+  animation: s27 1s infinite steps(8);
+}
+
+@keyframes s27 {
+  100% {transform: rotate(1turn)}
+}
+
+.spinner28 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  color: #514b82;
+  background: 
+    linear-gradient(currentColor 0 0) center/100% 3px,
+    linear-gradient(currentColor 0 0) center/3px 100%;
+  background-repeat: no-repeat;
+  animation: s28 2s infinite;
+}
+
+.spinner28::before,
+.spinner28::after {
+  content: "";
+  grid-area: 1/1;
+  background: repeating-conic-gradient(#0000 0 35deg,currentColor 0 90deg);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
+  border-radius: 50%;
+}
+.spinner28::after {
+  margin:20%;
+}
+
+@keyframes s28 {
+  100% {transform: rotate(1turn)}
+}
+
+.spinner29 {
+  --s:8px;
+  width: 50px;
+  height: 50px;
+  background: orange;
+  border-radius: 50%;
+  animation: s29 2s infinite linear;
+  clip-path: polygon(0 0,calc(50% - var(--s)) 0,50% var(--s),calc(50% + var(--s)) 0,100% 0,100% calc(50% - var(--s)),calc(100% - var(--s)) 50%,100% calc(50% + var(--s)),100% 100%,calc(50% + var(--s)) 100%, 50% calc(100% - var(--s)),calc(50% - var(--s)) 100%,0 100%,0 calc(50% + var(--s)), var(--s) 50%, 0 calc(50% - var(--s)));
+}
+
+@keyframes s29 {
+  100% {transform: rotate(1turn)}
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-auto-rows: 130px;
+  place-items:center;
+}
+
+* {
+  box-sizing: border-box;
+}
+    </style>
+</html>
