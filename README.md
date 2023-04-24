@@ -39,7 +39,6 @@
 <details>
   <summary>
   Krish Patel
-  kadi boy
   </summary>
   <p>https://github.com/krishpatel2383</p>
 </details>
